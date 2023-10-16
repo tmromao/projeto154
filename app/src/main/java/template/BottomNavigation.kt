@@ -4,12 +4,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -31,24 +35,24 @@ data class BottomNavigationItem(
 
 val getBottomItems = listOf(
     BottomNavigationItem(
-        title = "Home",
+        title = "Explorer",
         selectedIcon = Icons.Filled.Home,
         unselectedIcon = Icons.Outlined.Home,
     ),
     BottomNavigationItem(
-        title = "Search",
+        title = "Whishlist",
         selectedIcon = Icons.Filled.Search,
         unselectedIcon = Icons.Outlined.Search,
     ),
     BottomNavigationItem(
-        title = "Library",
-        selectedIcon = Icons.Filled.Email,
-        unselectedIcon = Icons.Outlined.Email,
+        title = "Cart",
+        selectedIcon = Icons.Filled.ShoppingCart,
+        unselectedIcon = Icons.Outlined.ShoppingCart,
     ),
     BottomNavigationItem(
-        title = "Settings",
-        selectedIcon = Icons.Filled.Settings,
-        unselectedIcon = Icons.Outlined.Settings,
+        title = "Profile",
+        selectedIcon = Icons.Filled.Person,
+        unselectedIcon = Icons.Outlined.Person,
     ),
 )
 
