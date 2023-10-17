@@ -16,6 +16,8 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import template.components.ScreenCart
+import template.components.ScreenExplorer
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,9 +72,7 @@ fun MyApp() {
                 }
             }
         },
-    ) {
-
-    }
+    ) {}
 
     NavHost(
         navController = navController,
@@ -100,19 +100,12 @@ fun ScreenProfile() {
     Text("Profile")
 }
 
-@Composable
-fun ScreenCart() {
-    Text("Cart")
-}
+
 
 @Composable
 fun ScreenWhishlist() {
     Text("Whishlist")
 }
 
-@Composable
-fun ScreenExplorer() {
-    Text("Explorer")
-}
 
 
