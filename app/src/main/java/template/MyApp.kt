@@ -13,10 +13,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyApp() {
+
+    val navController = rememberNavController()
 
     var selectedItemIndex by rememberSaveable {
         mutableStateOf(0)
@@ -30,6 +35,7 @@ fun MyApp() {
                         selected = selectedItemIndex == index,
                         onClick = {
                             selectedItemIndex = index
+                            navController.navigate(bottomNavigationItem.title)
                         },
                         label = {
                             Text(bottomNavigationItem.title)
@@ -68,6 +74,45 @@ fun MyApp() {
 
     }
 
+    NavHost(
+        navController = navController,
+        startDestination = "explorer",
+    ){
+        composable("explorer"){
+            ScreenExplorer()
+        }
+        composable("whishlist"){
+            ScreenWhishlist()
+        }
+        composable("cart"){
+            ScreenCart()
+        }
+        composable("profile"){
+            ScreenProfile()
+        }
+
+    }
+
+}
+
+@Composable
+fun ScreenProfile() {
+    Text("Profile")
+}
+
+@Composable
+fun ScreenCart() {
+    Text("Cart")
+}
+
+@Composable
+fun ScreenWhishlist() {
+    Text("Whishlist")
+}
+
+@Composable
+fun ScreenExplorer() {
+    Text("Explorer")
 }
 
 

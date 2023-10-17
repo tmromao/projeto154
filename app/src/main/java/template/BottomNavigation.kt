@@ -32,7 +32,6 @@ data class BottomNavigationItem(
     val badgeCount: Int? = null,
 )
 
-
 val getBottomItems = listOf(
     BottomNavigationItem(
         title = "Explorer",
